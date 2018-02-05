@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Assignment-1-Template/src/main/java"/>
+	<classpathentry kind="src" path="Hadoop-WordCount-Example/src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="Assignment-1-Template/target/classes"/>
+</classpath>
