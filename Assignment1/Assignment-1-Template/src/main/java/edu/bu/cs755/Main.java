@@ -13,7 +13,7 @@ public class Main {
 		 return "";
 	 }
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		
 		StreamInput readInput = new StreamInput();
@@ -25,9 +25,6 @@ public class Main {
 		
 		Task2 task2 = new Task2(Top5000List);
 		task2.top20ranklist();
-
-		
-		
 
 	}
 }
