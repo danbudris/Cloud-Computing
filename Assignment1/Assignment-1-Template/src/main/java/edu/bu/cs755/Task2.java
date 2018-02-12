@@ -4,6 +4,8 @@ import static java.util.Comparator.reverseOrder;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -54,13 +56,14 @@ public class Task2 {
 		Fivethousandwords.add("is");
 		Fivethousandwords.add("refer");
 		
-		Map<String , Integer> donyoo = splitString.stream()
-				
+		Map<String, Integer> donyoo = splitString.stream()
+				.collect(Collectors.toMap(e ->getTheKey(e), v -> getTheValue(v)) )
+				.entrySet().stream()
+				.sorted(Map.Entry.comparingByValue(reverseOrder()))
 				.limit(20)		// limit top 20
-				.collect(Collectors.toMap(e ->getTheKey(e), v -> getTheValue(v) ));
-		
-		
-		System.out.println("\n\n\n");
+				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+
+		System.out.println("\n\n");
 		System.out.println(donyoo);
 
 	}
