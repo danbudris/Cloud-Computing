@@ -25,6 +25,7 @@ public class Main {
 		
 		Task2 task2 = new Task2(Top5000List);
 		task2.top20ranklist();
+		
 
 	}
 }

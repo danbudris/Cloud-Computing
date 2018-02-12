@@ -2,7 +2,7 @@ package edu.bu.cs755;
 
 import static java.util.Comparator.reverseOrder;
 
-
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -55,9 +55,9 @@ public class Task2 {
 	    
 		Streamlines = Arrays.asList(testInput.split(">\n")).stream();
 		 */
+
+		// get data from S3.
 		
-	    //Streamlines = bufferRead.lines().parallel();
-	    
 		PropertyConfigurator.configure("log4j.properties");
 		String bucket_name= "metcs755";
 		String key_name="WikipediaPages_oneDocPerLine_1000Lines_small.txt";
@@ -65,33 +65,36 @@ public class Task2 {
 		
 		AmazonS3 s3Client = AmazonS3Client.builder().withRegion("us-east-1").build();	// this takes some time.
 		
-		S3Object s3object = s3Client.getObject(bucket_name, key_name);	// this takes some time.
+		S3Object s3object = s3Client.getObject(bucket_name, big_key_name);	// this takes some time.
 		s3is = s3object.getObjectContent();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(s3object.getObjectContent()));
 		Streamlines = reader.lines().parallel();
+		
+		Fivethousandwords = top5000List;
 	  
+		
 		/**
 	     * Task 2
 	     */
 		
 	    System.out.println("\n**** TASK 2 ****");
 	    
-		Fivethousandwords = top5000List;
+		
 	}
 
 	
 	public void top20ranklist() throws IOException{
 		Map<String, Integer> donyoo = Streamlines
-				.collect(Collectors.toMap(e ->getTheKey(e), v -> getTheValue(v)) )
+				.collect(Collectors.toMap(e ->getTheKey(e), v -> getTheValue(v), (oldValue, newValue) -> oldValue, LinkedHashMap::new) )
 				.entrySet().stream()
 				.sorted(Map.Entry.comparingByValue(reverseOrder()))
 				.limit(20)		// limit top 20
-				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
 		System.out.println("\n\n");
 		System.out.println("Top20 List: " + donyoo);
 		
-		s3is.close();
+		//s3is.close();
 	}
 
 	private String getTheKey(String e) {
