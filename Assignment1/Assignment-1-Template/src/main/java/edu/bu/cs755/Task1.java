@@ -16,8 +16,6 @@ public class Task1 {
 	     * Task 1
 	     */
 	    System.out.println("\n**** TASK 1 ****");
-	    
-	    long startTime = System.currentTimeMillis();
 
 	    Map<String, Integer> map = new HashMap<>();
 	    Integer order = 1;
@@ -35,10 +33,7 @@ public class Task1 {
 	    		System.out.println(String.format(input + " -> -1"));
 	    	}
 	    }
-	    
-	    long stopTime = System.currentTimeMillis();
-	    long elapsedTime = stopTime - startTime;
-	    System.out.println("index time "+elapsedTime/1000);
+
 	}
 
 }
