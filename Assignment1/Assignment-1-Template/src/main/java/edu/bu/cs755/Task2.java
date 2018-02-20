@@ -58,54 +58,36 @@ public class Task2 {
 		
 		AmazonS3 s3Client = AmazonS3Client.builder().withRegion("us-east-1").build();	// this takes some time.
 		
-<<<<<<< HEAD
-		S3Object s3object = s3Client.getObject(bucket_name, big_key_name);	// this takes some time.
-		s3is = s3object.getObjectContent();
-		BufferedReader reader = new BufferedReader(new InputStreamReader(s3object.getObjectContent()));
-		Streamlines = reader.lines().parallel();
-		
 		Fivethousandwords = top5000List;
-=======
+
 		s3object = s3Client.getObject(bucket_name, key_name);	// this takes some time.
 		s3is = s3object.getObjectContent();
 		reader = new BufferedReader(new InputStreamReader(s3object.getObjectContent()));
 		streamlines = reader.lines().parallel();
->>>>>>> 8a4b96fef1a1431d8fa3f2ccfad042e9f605a42d
-	  
+
 		
 		/**
 	     * Task 2
 	     */
 		
 	    System.out.println("\n**** TASK 2 ****");
-	    
-		
 	}
 
 	
 	public void top20ranklist() throws IOException{
-<<<<<<< HEAD
-		Map<String, Integer> donyoo = Streamlines
-				.collect(Collectors.toMap(e ->getTheKey(e), v -> getTheValue(v), (oldValue, newValue) -> oldValue, LinkedHashMap::new) )
-=======
+
 		Map<String, Integer> donyoo = streamlines
-				.collect(Collectors.toMap(e ->getTheKey(e), v -> getTheValue(v)) )
->>>>>>> 8a4b96fef1a1431d8fa3f2ccfad042e9f605a42d
+				.collect(Collectors.toMap(e ->getTheKey(e), v -> getTheValue(v), (oldValue, newValue) -> oldValue, LinkedHashMap::new) )
 				.entrySet().stream()
-				.sorted(Map.Entry.comparingByValue(reverseOrder()))
+				.sorted(Map.Entry.<String, Integer> comparingByValue(reverseOrder()))
 				.limit(20)		// limit top 20
 				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-
 		System.out.println("Top20 List: " + donyoo);
-		
-<<<<<<< HEAD
-		//s3is.close();
-=======
+
 		s3is.close();
 	    streamlines.close();
 		s3object.close();
 	    reader.close();
->>>>>>> 8a4b96fef1a1431d8fa3f2ccfad042e9f605a42d
 	}
 
 	private String getTheKey(String e) {

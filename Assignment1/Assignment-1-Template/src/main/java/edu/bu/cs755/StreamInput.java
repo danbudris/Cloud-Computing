@@ -43,7 +43,7 @@ public class StreamInput {
 			
 			// this is where it gets the text file from the web.
 			
-			S3Object s3object = s3Client.getObject(bucket_name, big_key_name);	// this takes some time.
+			S3Object s3object = s3Client.getObject(bucket_name, key_name);	// this takes some time.
 			S3ObjectInputStream s3is = s3object.getObjectContent();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(s3object.getObjectContent()));
 			Stream<String> streamlines = reader.lines().parallel();
