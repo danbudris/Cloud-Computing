@@ -74,8 +74,6 @@ public class Task3 {
         }
     }
 
-
-
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         Job job =  new Job(conf, "task3");

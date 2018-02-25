@@ -63,75 +63,6 @@ public class Task2 {
                 totalSum += 1;
                 // increment the error counter; non-errors are equal to 0, errors equal to 1
                 errSum += val.get();
-
-            }
-            // set the result to the percentage of error records in the total records for the given medallion number
-            answer = errSum/totalSum;
-
-            if(answer != 0){
-            	result.set(answer);
-            	context.write(key, result);
-            }
-        }
-    }
-
-    
-    
-    public static class PriorityQueueJob extends Mapper<Object, Text, Text, DoubleWritable>{
-    	
-    	private static PriorityQueue<Map.Entry<Text,DoubleWritable>> worstFive = new PriorityQueue<Map.Entry<Text,DoubleWritable>>(
-    		    new Comparator<Map.Entry<Text, DoubleWritable>>() {
-            	public int compare(Entry<Text, DoubleWritable> e1, Entry<Text, DoubleWritable> e2) {
-            		return e2.getValue().compareTo(e1.getValue());
-            }
-        });
-    	
-        public void map(Object key, Text value, Context context) throws IOException, InterruptedException {        	
-        	String line = value.toString();
-            String[] fields = line.split("\t");
-            
-            Text mapKey = new Text(fields[0]);
-            DoubleWritable mapValue = new DoubleWritable(Double.parseDouble(fields[1]));
-            
-            Map<Text, DoubleWritable> mapper = new HashMap<>();
-            
-            mapper.put(mapKey, mapValue);
-            
-            worstFive.addAll(mapper.entrySet());
-        }
-        
-        public void cleanup(Context context) throws IOException, InterruptedException {
-        	        	
-        	System.out.println(worstFive.size());
-
-        	//new AbstractMap.SimpleEntry<String, Integer>("exmpleString", 42);
-        
-        	while(!worstFive.isEmpty()){
-        		Map.Entry<Text, DoubleWritable> mapper = worstFive.poll();
-        		System.out.println(mapper);
-        		
-        		//context.write(mapper.getKey(), mapper.getValue());
-        	}
-        }
-    }
-
-    public static class ComputeFive extends Reducer<Text,DoubleWritable,Text,DoubleWritable> {
-        private DoubleWritable result = new DoubleWritable();
-        
-        public void reduce(Text key, Iterable<DoubleWritable> values, Context context) throws IOException, InterruptedException {
-            
-            // Store the total number of records
-            double totalSum = 0;
-            // Store the number of error records
-            double errSum = 0;
-            double answer = 0;
-            
-            for (DoubleWritable val : values) {
-                // increment the total number of trips this taxi has taken
-                totalSum += 1;
-                // increment the error counter; non-errors are equal to 0, errors equal to 1
-                errSum += val.get();
-
             }
             // set the result to the percentage of error records in the total records for the given medallion number
             answer = errSum/totalSum;
@@ -184,8 +115,8 @@ public class Task2 {
         
         // compute the fraction of errors for taxi. 
         secondJob.setMapperClass(PriorityQueueJob.class);
-        //secondJob.setCombinerClass(ComputeFive.class);
-        //secondJob.setReducerClass(ComputeFive.class);
+        secondJob.setCombinerClass(ComputeFive.class);
+        secondJob.setReducerClass(ComputeFive.class);
         
         
         // find five worst taxis.
