@@ -1,4 +1,4 @@
-package edu.bu.cs755;
+package edu.bu.cs755.Task1;
 
 import java.io.IOException;
 

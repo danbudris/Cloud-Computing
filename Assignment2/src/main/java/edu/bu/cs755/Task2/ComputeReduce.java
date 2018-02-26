@@ -1,4 +1,4 @@
-package edu.bu.cs755;
+package edu.bu.cs755.Task2;
 
 import java.io.IOException;
 
@@ -6,7 +6,7 @@ import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
-public class ComputeFive extends Reducer<DoubleWritable, Text , Text, DoubleWritable> {
+public class ComputeReduce extends Reducer<DoubleWritable, Text , Text, DoubleWritable> {
     
     public void reduce(DoubleWritable values, Iterable<Text> keyIn, Context context) throws IOException, InterruptedException {
     	

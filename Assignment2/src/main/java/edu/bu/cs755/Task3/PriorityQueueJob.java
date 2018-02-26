@@ -1,4 +1,4 @@
-package edu.bu.cs755;
+package edu.bu.cs755.Task3;
 
 import java.io.IOException;
 import java.util.Comparator;
@@ -33,7 +33,7 @@ public class PriorityQueueJob extends Mapper<Object, Text, DoubleWritable, Text>
         
         worstFive.addAll(mapper.entrySet());
         
-        if(worstFive.size() > 50){
+        if(worstFive.size() > 10){
         	worstFive.remove();
         }
         

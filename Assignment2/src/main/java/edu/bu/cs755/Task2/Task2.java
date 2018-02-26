@@ -1,11 +1,6 @@
-package edu.bu.cs755;
+package edu.bu.cs755.Task2;
 
 import java.io.IOException;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.PriorityQueue;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -116,7 +111,7 @@ public class Task2 {
         secondJob.setMapperClass(PriorityQueueJob.class);
         // don't need combiner.
         //secondJob.setCombinerClass();
-        secondJob.setReducerClass(ComputeFive.class);
+        secondJob.setReducerClass(ComputeReduce.class);
         
         secondJob.setOutputKeyClass(Text.class);
         secondJob.setOutputValueClass(DoubleWritable.class);

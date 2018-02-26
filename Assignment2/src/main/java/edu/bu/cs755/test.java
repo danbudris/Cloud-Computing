@@ -14,6 +14,10 @@ public class test {
 		z = x/y;
 		
 		System.out.println(z);
+		
+		if( Double.parseDouble("1") > 0){
+			System.out.println("null is bigger than"); 
+		}
 
 	}
 
