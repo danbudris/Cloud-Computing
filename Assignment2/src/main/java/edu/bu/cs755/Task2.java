@@ -78,7 +78,6 @@ public class Task2 {
     	// first job
     	Configuration conf = new Configuration();
     	
-    	/*
         Job job =  new Job(conf, "task2-1");
         
         job.setJarByClass(Task2.class);
@@ -98,7 +97,7 @@ public class Task2 {
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
         
         job.waitForCompletion(true);
-        */
+        
       
         // second job.
         
@@ -106,22 +105,21 @@ public class Task2 {
         Job secondJob =  new Job(conf, "task2-2");
         
         secondJob.setJarByClass(Task2.class);
+
+        // mapOutput is value : key because context.write sort by key.
+        // this is setting for map out
+        secondJob.setMapOutputKeyClass(DoubleWritable.class);
+        secondJob.setMapOutputValueClass(Text.class);
         
-        secondJob.setOutputKeyClass(Text.class);
-        secondJob.setOutputValueClass(DoubleWritable.class);
-        
-        secondJob.setMapOutputKeyClass(Text.class);
-        secondJob.setMapOutputValueClass(DoubleWritable.class);
         
         // compute the fraction of errors for taxi. 
         secondJob.setMapperClass(PriorityQueueJob.class);
-        secondJob.setCombinerClass(ComputeFive.class);
+        // don't need combiner.
+        //secondJob.setCombinerClass();
         secondJob.setReducerClass(ComputeFive.class);
         
-        
-        // find five worst taxis.
-        //job.setSortComparatorClass(org.apache.hadoop.io.DoubleWritable.Comparator.class);
-        //job.setNumReduceTasks(5);// number of reduce tasks are set to 1
+        secondJob.setOutputKeyClass(Text.class);
+        secondJob.setOutputValueClass(DoubleWritable.class);
         
         FileInputFormat.addInputPath(secondJob, new Path(args[1]));
         FileOutputFormat.setOutputPath(secondJob, new Path(args[2]));

@@ -25,16 +25,8 @@ public class Task1 {
         public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
             String line = value.toString();
             String[] fields = line.split(",");
-            
-            
-            // for example print out.
-            /*
-            for (String str : fields) {
-                System.out.println(str + "\n");
-            }
-            System.out.println(fields.length);
-            */
-            
+
+            // check if the distance values are 0
             if  (fields.length == 17) {
                 if (fields[6].equals("0.000000") || fields[7].equals("0.000000") || fields[8].equals("0.000000") || fields[9].equals("0.000000") || 
                 	fields[6].equals("") || fields[7].equals("") || fields[8].equals("") || fields[9].equals("")) {
