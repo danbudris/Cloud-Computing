@@ -7,14 +7,14 @@ from pyspark import SparkContext
 
 if __name__ == "__main__":
     
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         print("Usage: wordcount <file>", file=sys.stderr)
         exit(-1)
 
     sc = SparkContext(appName="PythonTaxi")
     taxilines = sc.textFile(sys.argv[1], 1)
     
-#    pointofInterest = sc.textFile(sys.argv[2], 1)
+    pointofInterest = sc.textFile(sys.argv[2], 1)
     
     #difference btw map and flatmap
     # map : go each and change
@@ -43,31 +43,57 @@ if __name__ == "__main__":
             lati  = listline[9]
             
             if longi and lati and time: #is not empty and
-                if longi !=0 and lati != 0: #if value is not 0.
+                if longi !=0.0 and lati != 0.0: #if value is not 0.
                     if morningTime(time):
                         return listline
     
     def getCellID(lat, lon):
-        return (str(round(lat, 2)) + "-"+str(round(lon, 2)))
+        return (str(round(lat, 2)) + " & "+str(round(lon, 2)))
     
+    #daytime.
+    #weekday() Return the day of the week as an integer, where Monday is 0 and Sunday is 6.
     def getDay(value):
         dateform = value.split(' ')
         date = dateform[0].split('-')
         day = datetime.date(int(date[0]), int(date[1]), int(date[2]))
         return day.weekday()
     
+    # value[1] is a day. 
+    def isSunday(value):
+        if value[1] == 0:
+            return value
+        
     # 1. filter out
-    # 2. get only taxi ID and driver ID
-    # 3. distinct items if taxi ID and driver ID are same
-    # 4. after distinct, i don't need to care about driver ID anymore. replace 1 with driver ID
+    # 2. get only Cell ID and day
+    # 3. 
+    # 4. 
     # 5. add up.
     # 6. swap key and value for sorting top
     
     
     filteredTaxi = taxilines.map(lambda x: x.split(',')) \
     .filter(correctFormat) \
-    .map(lambda x: (getCellID(float(x[9]), float(x[8])), getDay(x[3]) ) )
+    .map(lambda x: (getCellID(float(x[9]), float(x[8])), getDay(x[3]) ) ) \
+  
     
-    newtaxi = filteredTaxi.top(10)
+    sundayTaxi = filteredTaxi.filter(isSunday) \
+    .map(lambda x: (x[0], 1)) \
+    .reduceByKey(add) \
+    .map(lambda x: (x[1],x[0])) \
+    .top(20)
     
-print(newtaxi)
+    # different way to filter
+    weekTaxi = filteredTaxi.filter(lambda x: x[1] != 0) \
+    .map(lambda x: (x[0], 1)) \
+    .reduceByKey(add) \
+    .map(lambda x: (x[1],x[0])) \
+    .top(20)
+    
+    
+    
+
+
+#print(filteredTaxi.collect())
+         
+print(sundayTaxi)
+print(weekTaxi)
