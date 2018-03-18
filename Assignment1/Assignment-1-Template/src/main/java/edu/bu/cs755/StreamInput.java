@@ -6,10 +6,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import java.util.Arrays;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import static java.util.Comparator.reverseOrder;
 import static java.util.function.Function.identity;
@@ -45,16 +43,16 @@ public class StreamInput {
 			
 			// this is where it gets the text file from the web.
 			
-			S3Object s3object = s3Client.getObject(bucket_name, big_key_name);	// this takes some time.
+			S3Object s3object = s3Client.getObject(bucket_name, key_name);	// this takes some time.
 			S3ObjectInputStream s3is = s3object.getObjectContent();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(s3object.getObjectContent()));
-			Stream<String> Streamlines = reader.lines().parallel();
+			Stream<String> streamlines = reader.lines().parallel();
 
 		    long stopTime = System.currentTimeMillis();
 		    long elapsedTime = stopTime - startTime;
 		    System.out.println("read time :" + elapsedTime/1000);
 
-		    top5000 = Streamlines
+		    top5000 = streamlines
 					.map(line -> line.split(">")[1].replaceAll("<[^>]+>", "")) // 
 					.flatMap(line -> Arrays.stream(line.trim().split(" ")))
 					.map(word -> word.replaceAll("[^a-zA-Z]", "").toLowerCase().trim())
@@ -67,7 +65,11 @@ public class StreamInput {
 					.collect(toList());
 		    
 		    System.out.println("count time :"+elapsedTime/1000);
+		    
+		    s3object.close();
 		    s3is.close();
+		    reader.close();
+		    streamlines.close();
 		    
 		} catch (AmazonServiceException e) {
 			System.err.println(e.getErrorMessage());

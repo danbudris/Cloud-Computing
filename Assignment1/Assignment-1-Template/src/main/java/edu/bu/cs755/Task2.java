@@ -17,30 +17,23 @@ import org.apache.log4j.PropertyConfigurator;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.S3Object;
-
-import static java.util.function.Function.identity;
-import static java.util.stream.Collectors.counting;
-import static java.util.stream.Collectors.groupingBy;
-
+import com.amazonaws.services.s3.model.S3ObjectInputStream;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.amazonaws.AmazonServiceException;
-import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.AmazonS3Client;
-import com.amazonaws.services.s3.model.S3Object;
-import com.amazonaws.services.s3.model.S3ObjectInputStream;
 
 
 public class Task2 {
 	
-	private Stream<String> Streamlines;
+	private Stream<String> streamlines;
 	private List<String> Fivethousandwords;
 	S3ObjectInputStream s3is;
+	S3Object s3object;
+	BufferedReader reader;
 	
-	public Task2 (List<String> top5000List){
+	public Task2 (List<String> top5000List) throws IOException{
 		
 		// custom input
 		/*
@@ -65,36 +58,36 @@ public class Task2 {
 		
 		AmazonS3 s3Client = AmazonS3Client.builder().withRegion("us-east-1").build();	// this takes some time.
 		
-		S3Object s3object = s3Client.getObject(bucket_name, big_key_name);	// this takes some time.
-		s3is = s3object.getObjectContent();
-		BufferedReader reader = new BufferedReader(new InputStreamReader(s3object.getObjectContent()));
-		Streamlines = reader.lines().parallel();
-		
 		Fivethousandwords = top5000List;
-	  
+
+		s3object = s3Client.getObject(bucket_name, key_name);	// this takes some time.
+		s3is = s3object.getObjectContent();
+		reader = new BufferedReader(new InputStreamReader(s3object.getObjectContent()));
+		streamlines = reader.lines().parallel();
+
 		
 		/**
 	     * Task 2
 	     */
 		
 	    System.out.println("\n**** TASK 2 ****");
-	    
-		
 	}
 
 	
 	public void top20ranklist() throws IOException{
-		Map<String, Integer> donyoo = Streamlines
+
+		Map<String, Integer> donyoo = streamlines
 				.collect(Collectors.toMap(e ->getTheKey(e), v -> getTheValue(v), (oldValue, newValue) -> oldValue, LinkedHashMap::new) )
 				.entrySet().stream()
-				.sorted(Map.Entry.comparingByValue(reverseOrder()))
+				.sorted(Map.Entry.<String, Integer> comparingByValue(reverseOrder()))
 				.limit(20)		// limit top 20
 				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-
-		System.out.println("\n\n");
 		System.out.println("Top20 List: " + donyoo);
-		
-		//s3is.close();
+
+		s3is.close();
+	    streamlines.close();
+		s3object.close();
+	    reader.close();
 	}
 
 	private String getTheKey(String e) {
@@ -110,24 +103,22 @@ public class Task2 {
 	    Predicate<String> predicate =
 	    		e -> (Fivethousandwords.contains(e));
 	    
-		Long resultvalue = 
+		Integer resultvalue = 
 	            words.stream()
 	            	 .map(line -> line.replaceAll("<[^>]+>", ""))
 	            	 .flatMap(line -> Arrays.stream(line.trim().split(" ")))	
 	                 .map(String::toLowerCase)
 	                 .filter(word -> word.length() > 0)
+	                 .distinct()
 	                 .filter(predicate)
-	                 
-	                 .collect(groupingBy(identity(), counting()))
+	                 //.collect(groupingBy(identity(), counting()))
+	                 .collect(Collectors.toMap(s -> s, s -> 1, Integer::sum))
 	                 .entrySet().stream()
-	                 .sorted(Map.Entry.<String, Long> comparingByValue(reverseOrder()).thenComparing(Map.Entry.comparingByKey()))
 	                 .limit(5000)
 	                 .map(e ->e.getValue())
-	                 .reduce((long) 0, (x,y) -> x +y);
+	                 .reduce(0, (x,y) -> x + y);
 	                 //.collect(toList());
-
-	    //System.out.println("final list : " + resultvalue);
-
+		
 	    return resultvalue.intValue();
 	}
 }
