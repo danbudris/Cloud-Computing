@@ -23,7 +23,14 @@ def main(inputTaxi, inputPoi, output):
                     if morningTime(time):
                         return listline
     
-    
+    def morningTime(value):
+        date = value.split(' ')
+        time = date[1].split(':')
+        hour = int(time[0])
+        if hour >= 8 and hour < 11:
+            return True
+        return False
+
     def isfloat(value):
         try:
             float(value)
