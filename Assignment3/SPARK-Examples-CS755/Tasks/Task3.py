@@ -6,38 +6,32 @@ from pyspark import SparkContext
 
 def main(inputTaxi, inputPoi, output):
     if len(sys.argv) != 4:
-        print("Please specify input taxi data, input poi data, and an output location", file=sys.stderr)
-        exit(-1)
-    
+            print("Please supply taxi input, poi input, and output arguments", file=sys.stderr)
+            exit(-1)    
+            
+    # remove lines if they don't have 16 values
+    # also if values are empty.
     def correctFormat(listline):
         if(len(listline) == 17):
             try:
                 time = listline[3]
-                longi = float(listline[8])
-                lati  = float(listline[9])
+                longi = float(listline[8].strip())
+                lati  = float(listline[9].strip())
             except Exception:
                 return
-                
+
             if longi and lati and time: #is not empty and
                 if longi !=0.0 and lati != 0.0: #if value is not 0.
-                    if morningTime(time):
-                        return listline
+                    return listline
     
-    def morningTime(value):
-        date = value.split(' ')
-        time = date[1].split(':')
-        hour = int(time[0])
-        if hour >= 8 and hour < 11:
-            return True
-        return False
-
+    
     def isfloat(value):
         try:
             float(value)
             return True
         except:
             return False
-    
+
     def correctPoint(listplace):
         lati  = listplace[0]
         longi = listplace[1]
@@ -82,25 +76,26 @@ def main(inputTaxi, inputPoi, output):
     dateHourTaxi = inputTaxi.map(lambda x: x.decode("iso-8859-1").split(',')) \
     .filter(correctFormat) \
     .map(lambda x: ( (getCellID(float(x[9]), float(x[8])), setDate(x[3]), setTime(x[3]) ), 1 ) ) \
-    .reduceByKey(add) \
+    .reduceByKey(add)
 
     # get how many date on same place same time.
     # this is for comput average
     gridDateTaxi = dateHourTaxi.map(lambda x: ((getgrid(x), getTime(x)), 1) ) \
     .reduceByKey(add) \
     .collectAsMap()
-    
+
     def lookforDate(value):
         numberofdrop = gridDateTaxi.get(value)
         if numberofdrop:
             return numberofdrop
         return 1
     
+    
     averageTaxi = dateHourTaxi.map(lambda x: ((getgrid(x), getTime(x)), x[1])) \
     .reduceByKey(add) \
     .map(lambda x: (x[0], x[1]/lookforDate(x[0])) ) \
     .collectAsMap()
-    
+
     def lookforAverage(value):
         lookupv = (getgrid(value), getTime(value))
         numberofdrop = averageTaxi.get(lookupv)
@@ -111,12 +106,17 @@ def main(inputTaxi, inputPoi, output):
     top20 = dateHourTaxi.map(lambda x: ((x[0][0], x[0][1], x[0][2], x[1]), x[1]/lookforAverage(x) )) \
     .map(lambda x: (x[1], x[0])) \
     .top(20)
+    
+    #print ("top20")
+    #print (top20)
 
+    
     placelist = inputPoi.map(lambda x: x.decode("iso-8859-1").split('||')) \
     .filter(correctPoint) \
     .map(lambda x: (getCellID(float(x[0]), float(x[1])), x[2]) ) \
     .reduceByKey(lambda a,b : a + ', ' +b) \
     .collectAsMap()
+    
     
     def lookforplaces(value):
         lookupv = placelist.get(value)
@@ -137,7 +137,6 @@ def main(inputTaxi, inputPoi, output):
     
 
 if __name__ == "__main__":
-
     # set up the spark context
     sc = SparkContext(appName="PythonTaxiTask3")
 
