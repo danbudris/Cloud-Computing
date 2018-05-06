@@ -1,0 +1,1207 @@
+@article{Alexandra04rdftl:,
+    author = {George Papamarkos Alexandra and Ra Poulovassilis and Peter T. Wood},
+    title = {RDFTL : An Event-Condition-Action Language for RDF},
+    booktitle = {In Proc. 3rd Int. Workshop on Web Dynamics (in conjunction with WWW2004},
+    year = {2004},
+    pages = {223--248}
+}
+
+@book{gero,
+ author={Gero M\"uhl, Ludger Fiege, Peter Pietzuch},
+ title={Distributed Event-Based Systems},
+ year={2006},
+ publisher={springer}
+}
+
+@misc{ruleresponder,
+author={A.~Paschke, H.~Boley, A.~Kozlenkov, and B.~Craig},
+title={Rule responder: RuleML-based agents for distributed collaboration on
+  the pragmatic web},
+booktitle = {Proceedings of the 2nd international conference on Pragmatic web
+  Tilburg, The Netherlands},
+year={2007}
+}
+@misc{eventontology07,
+author={Y. Raimond, S. Abdallah},
+title={The Event Ontology},
+howpublished = {\url{http://motools.sourceforge.net/event/event.html}},
+publisher={Queen Mary, University of London}
+}
+
+@article{1386007,
+ author = {Aasman,, Jans},
+ title = {Unification of geospatial reasoning, temporal logic, \& social network analysis in event-based systems},
+ booktitle = {DEBS '08: Proceedings of the second international conference on Distributed event-based systems},
+ year = {2008},
+ isbn = {978-1-60558-090-6},
+ pages = {139--145},
+ location = {Rome, Italy},
+ doi = {http://doi.acm.org/10.1145/1385989.1386007},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+}
+
+@article{1266920,
+ author = {Etzion, Opher},
+ title = {Semantic approach to event processing},
+ booktitle = {DEBS '07: Proceedings of the 2007 inaugural international conference on Distributed event-based systems},
+ year = {2007},
+ isbn = {978-1-59593-665-3},
+ pages = {139--139},
+ location = {Toronto, Ontario, Canada},
+ doi = {http://doi.acm.org/10.1145/1266894.1266920},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+}
+
+@book{luckham02,
+author={David Luckham},
+title={The Power of Events: An Introduction to Complex Event Processing in Distributed Enterprise Systems},
+year = {2002},
+publisher = {Addison-Wesley Longman, Amsterdam}
+}
+
+@misc{RDFS,
+title ={RDF Vocabulary Description Language},
+howpublished = {\url{http://www.w3.org/TR/rdf-schema/}},
+publisher={}
+}
+
+@misc{OWL,
+title ={OWL Web Ontology Language},
+howpublished = {\url{http://www.w3.org/TR/owl-features/}},
+publisher={}
+}
+
+@misc{SPARQL,
+author={W3C},
+title ={SPARQL Query Language for RDF},
+howpublished = {\url{http://www.w3.org/TR/rdf-sparql-query/}},
+}
+
+@misc{time,
+title={W3C Time Ontology in OWL},
+howpublished = {\url{http://www.w3.org/TR/owl-time/}},
+publisher={}
+}
+
+@misc{epts,
+editor ={David Luckham, Roy Schulte}, 
+title={Event Glossary 1.1, Event Processing Technical Society},
+howpublished = {\url{http://www.ep-ts.com}},
+year={2008},
+publisher={EPTS}
+}
+
+
+@article{Bry07rule-basedcomposite,
+    author = {Francois Bry and Michael Eckert},
+    title = {Rule-Based Composite Event Queries: The Language XChange EQ and its Semantics},
+    booktitle = {In Proc. Int. Conf. on Web Reasoning and Rule Systems},
+    year = {2007},
+    publisher = {Springer}
+}
+
+
+ 
+@misc{Gillam,
+  author = "Gillam, L. and Ahmad, K. and Ahmad, S. and Casey, M. and Cheng, D. and Taskaya, T. and Oliveira, P.C.F. and Manomaisupat, P",
+  title = "Economic News and Stock Market Correlation: A Study of the UK Market",
+  booktitle = "Proceedings of the Workshop on Making Money in the Financial Services Industry, at the 6th International Conference on Terminology and Knowledge Engineering",
+  year = "2002" 
+}
+
+
+@MISC{CBE04, 
+    author={IBM},
+    title={Common Base Event},
+    url={http://www.ibm.com/developerworks/library/specification/ws-cbe/},
+    year = {2004}
+}
+
+@article{1464574,
+ author = {Paschke, Adrian and Bichler, Martin},
+ title = {Knowledge representation concepts for automated SLA management},
+ journal = {Decis. Support Syst.},
+ volume = {46},
+ number = {1},
+ year = {2008},
+ issn = {0167-9236},
+ pages = {187--205},
+ doi = {http://dx.doi.org/10.1016/j.dss.2008.06.008},
+ publisher = {Elsevier Science Publishers B. V.},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+}
+
+@inproceedings{Schmidt2008b,
+  author = {Kay-Uwe Schmidt and Darko Anicic and Roland St{\"u}hmer},
+  booktitle = {SBPM2008: 3rd international Workshop on Semantic Business Process Management in conjunction with the 5th European Semantic Web Conference (ESWC'08)},
+  publisher = {CEUR Workshop Proceedings (CEUR-WS.org, ISSN 1613-0073)},
+  title = {Event-driven Reactivity: A Survey and Requirements Analysis},
+  url = {http://sbpm2008.fzi.de/paper/paper7.pdf},
+  year = {2008},
+  month = {June}
+}
+
+@article{Chakravarthy94,
+ author = {Chakravarthy, S. and Mishra, D.},
+ title = {Snoop: an expressive event specification language for active databases},
+ journal = {Data Knowl. Eng.},
+ volume = {14},
+ number = {1},
+ year = {1994},
+ issn = {0169-023X},
+ pages = {1--26},
+ doi = {http://dx.doi.org/10.1016/0169-023X(94)90006-X},
+ publisher = {Elsevier Science Publishers B. V.},
+ address = {Amsterdam, The Netherlands, The Netherlands}
+}
+
+
+@inproceedings{Gehani92,
+ author = {Gehani, Narain H. and Jagadish, H. V. and Shmueli, Oded},
+ title = {Composite Event Specification in Active Databases: Model \& Implementation},
+ booktitle = {VLDB '92: Proceedings of the 18th International Conference on Very Large Data Bases},
+ year = {1992},
+ isbn = {1-55860-151-1},
+ pages = {327--338},
+ publisher = {Morgan Kaufmann Publishers Inc.},
+ address = {San Francisco, CA, USA}
+}
+
+@inproceedings{Gatziu94detectingcompositeevents,
+    author = {Stella Gatziu and Klaus R. Dittrich},
+    title = {Detecting CompositeEvents in Active Database Systems Using Petri Nets},
+    booktitle = {Fourth International Workshop on Research Issues in Data Engineering: Active Database Systems},
+    year = {1994}
+}
+
+@inproceedings{TeymourianDEBS09,
+ author = {Teymourian, Kia and Paschke, Adrian},
+ title = {Towards semantic event processing},
+ booktitle = {DEBS '09: Proceedings of the Third ACM International Conference on Distributed Event-Based Systems},
+ year = {2009},
+ isbn = {978-1-60558-665-6},
+ pages = {1--2},
+ location = {Nashville, Tennessee},
+ doi = {http://doi.acm.org/10.1145/1619258.1619296},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@inproceedings{TeymourianRuleML09,
+ author = {Teymourian, Kia and Paschke, Adrian},
+ title = {Semantic Rule-Based Complex Event Processing},
+ booktitle = {RuleML 2009: Proceedings of the International RuleML Symposium on Rule Interchange and Applications},
+ year = {2009},
+ location = {Las Vegas, Nevada, USA}
+}
+
+@inproceedings{paschkerule07,
+    author = {Paschke, Adrian},
+    booktitle = {In Proc. 2nd International Workshop on Event Drive Architecture and Event Processing Systems (EDA-PS},
+    title = {A Homogenous Reaction Rule Language for Complex Event Processing},
+    year = {2007}
+}
+
+@book{chandy09,
+ author = {Chandy K. Mani and Schulte W. Roy},
+ title = {Event Processing: Designing IT Systems for Agile Companies},
+ year = {2009},
+ isbn = {0071633502, 9780071633505},
+ publisher = {McGraw-Hill, Inc.},
+ address = {New York, NY, USA}
+}
+
+@article{shaw09,
+        title = {LODE: Linking Open Descriptions of Events },
+        author = {Ryan Shaw and Rapha{\"e}l Troncy and Lynda Hardman},
+        institution = {School of Information},
+        number = {Paper 2009-036},
+        month = {August},
+        year = {2009}
+}
+
+
+@inproceedings{Scherp09,
+ author = {Scherp, Ansgar and Franz, Thomas and Saathoff, Carsten and Staab, Steffen},
+ title = {F--a model of events based on the foundational ontology dolce+DnS ultralight},
+ booktitle = {K-CAP '09: Proceedings of the fifth international conference on Knowledge capture},
+ year = {2009},
+ isbn = {978-1-60558-658-8},
+ pages = {137--144},
+ location = {Redondo Beach, California, USA},
+ doi = {http://doi.acm.org/10.1145/1597735.1597760},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+
+
+
+
+@INPROCEEDINGS{Bry07rule-basedcomposite,
+    author = {Francois Bry and Michael Eckert},
+    title = {Rule-Based Composite Event Queries: The Language XChange EQ and its Semantics},
+    booktitle = {In Proc. Int. Conf. on Web Reasoning and Rule Systems},
+    year = {2007},
+    publisher = {Springer}
+}
+
+
+
+@inproceedings{
+Boley2006,
+  title =	"The Rule{ML} Family of Web Rule Languages",
+  author =	"Harold Boley",
+  bibdate =	"2006-10-31",
+  bibsource =	"DBLP,
+		 http://dblp.uni-trier.de/db/conf/ppswr/ppswr2006.html#Boley06",
+  booktitle =	"PPSWR",
+  booktitle =	"Principles and Practice of Semantic Web Reasoning, 4th
+		 International Workshop, {PPSWR} 2006, Budva,
+		 Montenegro, June 10-11, 2006, Revised Selected Papers",
+  publisher =	"Springer",
+  year = 	"2006",
+  volume =	"4187",
+  editor =	"Jos{\'e} J{\'u}lio Alferes and James Bailey and
+		 Wolfgang May and Uta Schwertel",
+  ISBN = 	"3-540-39586-5",
+  pages =	"1--17",
+  series =	"Lecture Notes in Computer Science",
+  URL =  	"http://dx.doi.org/10.1007/11853107_1",
+}
+
+
+
+
+@article{
+Kowalski1986,
+   Author = {Kowalski, R. A. and Sergot, M. J.},
+   Title = {A logic-based calculus of events},
+   Journal = {New Generation Computing},
+   Volume = {4},
+   Pages = {67-95},
+      Year = {1986} }
+
+
+
+@inproceedings{
+Paschke2006b,
+   Author = {Paschke, A.},
+   Title = {A Typed Hybrid Description Logic Programming Language with Polymorphic Order-Sorted DL-Typed Unification for Semantic Web Type Systems},
+   BookTitle = {OWL-2006 (OWLED'06)},
+   Address= {Athens, Georgia, USA},
+      Year = {2006} }
+
+
+
+
+
+@book{
+Lloyd1987,
+   Author = {Lloyd, J. W.},
+   Title = {Foundations of logic programming; (2nd extended ed.)},
+   Publisher = {Springer-Verlag New York, Inc.},
+   Address = {New York, NY, USA},
+      Year = {1987} }
+
+
+
+@inproceedings{Paschke2006RuleML,
+   Author = {Paschke, A.},
+   Title = {ECA-LP / ECA-RuleML: A Homogeneous Event-Condition-Action Logic Programming Language},
+   BookTitle = {RuleML-2006},
+   Address= {Athens, Georgia, USA},
+      Year = {2006} }
+
+@article{DBLP:journals/corr/abs-cs-0610167,
+  author    = {Adrian Paschke},
+  title     = {ECA-RuleML: An Approach combining ECA Rules with temporal
+               interval-based KR Event/Action Logics and Transactional
+               Update Logics},
+  journal   = {CoRR},
+  volume    = {abs/cs/0610167},
+  year      = {2006},
+  ee        = {http://arxiv.org/abs/cs/0610167},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+@article{1464574,
+ author = {Paschke, Adrian and Bichler, Martin},
+ title = {Knowledge representation concepts for automated SLA management},
+ journal = {Decis. Support Syst.},
+ volume = {46},
+ number = {1},
+ year = {2008},
+ issn = {0167-9236},
+ pages = {187--205},
+ doi = {http://dx.doi.org/10.1016/j.dss.2008.06.008},
+ publisher = {Elsevier Science Publishers B. V.},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+}
+
+@techreport{Bonner1995,
+   Author = {Bonner, A.J. and Kifer, M.},
+   Title = {Transaction logic programming (or a logic of declarative and procedural knowledge)},
+   Institution = {University of Toronto},
+   Type = {Technical Report CSRI-323},
+   Month= {Nov. 1995},
+   Year = {1995} 
+}
+
+
+@misc{Boley2000,
+   Author = {Boley, H. and Tabet, S.},
+   Title = {RuleML: The RuleML Standardization Initiative, http://www.ruleml.org/},
+   Year = {2000} 
+}
+
+
+
+@book{paschke2007,
+   Author = {Paschke, A.},
+   Title = {Rule-Based Service Level Agreements - Knowledge Representation for Automated e-Contract, SLA and Policy Management},
+   Publisher = {IDEA},
+   Address = {Munich},
+   Year = {2007} 
+}
+
+
+@INPROCEEDINGS{paschke09,
+    author = {Paschke, A. and Teymourian, K.},
+    title = {Rule Based Business Process Execution with BPEL+ },
+    booktitle = {In Proc. 5th International International Conference on Semantic Systems (i-Semantics 2009)},
+    year = {2009}
+}
+
+
+@misc{paschke2006c,
+   Author = {Paschke, A. and Kozlenkov, A. and Boley, H. and Kifer, M. and Tabet, S. and Dean, M. and Barrett, K.},
+   Title = {Reaction RuleML, http://ibis.in.tum.de/research/ReactionRuleML/},
+   Year = {2006} 
+}
+
+
+@incollection{paschke2006g,
+   Author = {Paschke, A. and Kiss, C. and Al-Hunaty, S.},
+   Title = {NPL: Negotiation Pattern Language - A Design Pattern Language for Decentralized (Agent) Coordination and Negotiation Protocols},
+   BookTitle = {E-Negotiation - An Introduction},
+   Editor = {Banda, R.},
+   Publisher = {ICFAI University Press, ISBN 81-314-0448-X},
+   Year = {2006} 
+}
+
+
+
+@inproceedings{Welsh2001,
+   Author = {Welsh, M. and Culler, D. and Brewer, E.},
+   Title = {SEDA: An Architecture for WellConditioned, Scalable Internet Services},
+   BookTitle = {Proceedings of Eighteeth Symposium on Operating Systems (SOSP-18)},
+   Address= {Chateau Lake Louise, Canada},
+   Year = {2001} 
+}
+
+
+
+@misc{paschke2007a,
+   Author = {Paschke, A. and Boley, H. and Kozlenkov, A. and Craig, B.},
+   Title = {Rule Responder: A RuleML-based Pragmatic Agent Web, www.responder.ruleml.org},
+   Year = {2007} 
+}
+
+@article{hevner2004dsi,
+        title = {{Design science in information systems research}},
+        author = {A.R. Hevner and S.T. March and J. Park and S. Ram},
+        journal = {Management Information Systems Quarterly},
+        number = 1,
+        pages = {75-106},
+        publisher = {MIS RESEARCH CENTER-SCHOOL OF MANAGEMENT},
+        volume = 28,
+        year = 2004,
+        url = {http://www.hec.unil.ch/yp/HCI/articles/hevner04.pdf},
+        abstract = {Two paradigms characterize much of the research in the Information Systems
+discipline: behavioral science and design science. The behavioral-science
+paradigm seeks to develop and verify theories that explain or predict human or
+organizational behavior. The design-science paradigm seeks to extend the
+boundaries of human and organizational capabilities by creating new and
+innovative artifacts. Both paradigms are foundational to the IS discipline,
+positioned as it is at the confluence of people, organizations, and technology.
+Our objective is to describe the performance of design-science research in
+Information Systems via a concise conceptual framework and clear guidelines
+for understanding, executing, and evaluating the research. In the designscience
+paradigm knowledge and understanding of a problem domain and its
+solution are achieved in the building and application of the designed artifact.
+Three recent exemplars in the research literature are used to demonstrate the
+application of these guidelines. We conclude with an analysis o f the challenges
+of performing high-quality design-science research in the context of the broader
+IS community},
+	biburl = {http://www.bibsonomy.org/bibtex/23513a80abec9636ac2248180b243b4de/yish},
+	keywords = {Design behavioral designapproaches designscience impact influence information informationsystems methodology research systems},
+    }
+
+
+
+@inproceedings{paschkek09,
+  author    = {Adrian Paschke and Alexander Kozlenkov},
+  title     = {Rule-Based Event Processing and Reaction Rules},
+  booktitle = {RuleML},
+  publisher = {Springer},
+  pages     = {53-66},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {5858},
+  year      = {2009}
+}
+
+
+@article{Horst,
+  author = {Herman Horst},
+  interHash = {45a2d6654662997faf8771a2bf352ee1},
+  intraHash = {617334557fbe459c69e70e7225fbedea},
+  journal = {The Semantic Web ISWC 2005},
+  pages = {668--684},
+  title = {Combining RDF and Part of OWL with Rules: Semantics, Decidability, Complexity},
+  url = {http://dx.doi.org/10.1007/11574620_48},
+  year = {2005}
+}
+
+
+@article{Stbf98,
+ author = {Studer, Rudi and Benjamins, V. Richard and Fensel, Dieter},
+ title = {Knowledge engineering: principles and methods},
+ journal = {Data Knowl. Eng.},
+ volume = {25},
+ number = {1-2},
+ year = {1998},
+ issn = {0169-023X},
+ pages = {161--197},
+ doi = {http://dx.doi.org/10.1016/S0169-023X(97)00056-6},
+ publisher = {Elsevier Science Publishers B. V.},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+ }
+
+
+@book{DBLP:series/lncs/5445,
+  editor    = {Heiner Stuckenschmidt and
+               Christine Parent and
+               Stefano Spaccapietra},
+  title     = {Modular Ontologies: Concepts, Theories and Techniques for
+               Knowledge Modularization},
+  booktitle = {Modular Ontologies},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {5445},
+  year      = {2009},
+  isbn      = {978-3-642-01906-7},
+  ee        = {http://dx.doi.org/10.1007/978-3-642-01907-4},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+@article{DBLP:journals/corr/abs-cs-0612128,
+  author    = {Daniel Gyllstrom and
+               Eugene Wu 0002 and
+               Hee-Jin Chae and
+               Yanlei Diao and
+               Patrick Stahlberg and
+               Gordon Anderson},
+  title     = {SASE: Complex Event Processing over Streams},
+  journal   = {CoRR},
+  volume    = {abs/cs/0612128},
+  year      = {2006},
+  ee        = {http://arxiv.org/abs/cs/0612128},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{1247620,
+ author = {Brenna, Lars and Demers, Alan and Gehrke, Johannes and Hong, Mingsheng and Ossher, Joel and Panda, Biswanath and Riedewald, Mirek and Thatte, Mohit and White, Walker},
+ title = {Cayuga: a high-performance event processing engine},
+ booktitle = {SIGMOD '07: Proceedings of the 2007 ACM SIGMOD international conference on Management of data},
+ year = {2007},
+ isbn = {978-1-59593-686-8},
+ pages = {1100--1102},
+ location = {Beijing, China},
+ doi = {http://doi.acm.org/10.1145/1247480.1247620},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+@article{197054,
+ author = {Chakravarthy, S. and Mishra, D.},
+ title = {Snoop: an expressive event specification language for active databases},
+ journal = {Data Knowl. Eng.},
+ volume = {14},
+ number = {1},
+ year = {1994},
+ issn = {0169-023X},
+ pages = {1--26},
+ doi = {http://dx.doi.org/10.1016/0169-023X(94)90006-X},
+ publisher = {Elsevier Science Publishers B. V.},
+ address = {Amsterdam, The Netherlands, The Netherlands},
+ }
+
+@inproceedings{REWERSE-RP-2007-035,
+	author = {Fran\c{c}ois Bry and Michael Eckert},
+	title = {Rule-Based Composite Event Queries: The Language XChangeEQ and its Semantics},
+	booktitle = {Proceedings of First International Conference on Web Reasoning and Rule Systems, Innsbruck, Austria (7th--8th June 2007)},
+	year = {2007},
+	volume = {4524},
+	series = {LNCS},
+	pages = {16--30},
+	url = {http://rewerse.net/publications/rewerse-publications.html#REWERSE-RP-2007-035}
+}
+
+@article{Gruber93,
+ author = {Gruber, Thomas R.},
+ title = {A translation approach to portable ontology specifications},
+ journal = {Knowl. Acquis.},
+ volume = {5},
+ number = {2},
+ year = {1993},
+ issn = {1042-8143},
+ pages = {199--220},
+ doi = {http://dx.doi.org/10.1006/knac.1993.1008},
+ publisher = {Academic Press Ltd.},
+ address = {London, UK, UK},
+ }
+
+@inproceedings{eero07,
+Author = {Eero Hyv\"onen and Robin Lindroos and Tomi Kauppinen and Riikka Henriksson},
+Title = {An Ontology Service for Geographical Content},
+Booktitle = {6th International and 2nd Asian Semantic Web Conference (ISWC2007+ASWC2007)},
+Year = {2007},
+Month = {November},
+Pages = {33--34},
+Abstract = {Geographic place names are widely used but are semantically often highly ambiguous. For example, there are 491 places in Finland sharing the same name "Isosaari" (great island) that are instances of several geographical classes, such as Island, Forest, Peninsula, Inhabited area, etc. Referencing unambiguously to a particular "Isosaari", either when annotating content or during information retrieval, can be quite problematic and requires usage of advanced search methods and maps for semantic disambiguation. This paper presents an ontology server, ONKI-Paikka, for solving the place finding and place name disambiguation problem. In ONKI-Paikka, places can be found by a faceted search engine, combined with semantic autocompletion and a map service for constraining search and for visualizing results. The service can be connected to legacy applications cost-effectively by using Ajax-technology in the same spirit as Google Maps that is used in ONKI-Paikka as a subservice.},
+Url = {http://data.semanticweb.org/conference/iswc-aswc/2007/tracks/posters-demos/papers/372}
+}
+
+
+@INPROCEEDINGS{Jones01geographicalinformation,
+    author = {Christopher B. Jones and Harith Alani and Douglas Tudhope},
+    title = {Geographical Information Retrieval with Ontologies of Place},
+    booktitle = {in Spatial Information Theory, LNCS 2205},
+    year = {2001},
+    pages = {322--335},
+    publisher = {Springer}
+}
+
+@inproceedings{1316951,
+ author = {Abdelmoty, A. I. and Smart, P. and Jones, C. B.},
+ title = {Building place ontologies for the semantic web:: issues and approaches},
+ booktitle = {GIR '07: Proceedings of the 4th ACM workshop on Geographical information retrieval},
+ year = {2007},
+ isbn = {978-1-59593-828-2},
+ pages = {7--12},
+ location = {Lisbon, Portugal},
+ doi = {http://doi.acm.org/10.1145/1316948.1316951},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+
+@article{250542,
+ author = {van Heijst, G. and Schreiber, A. Th. and Wielinga, B. J.},
+ title = {Using explicit ontologies in KBS development},
+ journal = {Int. J. Hum.-Comput. Stud.},
+ volume = {46},
+ number = {2-3},
+ year = {1997},
+ issn = {1071-5819},
+ pages = {183--292},
+ doi = {http://dx.doi.org/10.1006/ijhc.1996.0090},
+ publisher = {Academic Press, Inc.},
+ address = {Duluth, MN, USA},
+ }
+
+@article{958678,
+ author = {Doerr, Martin},
+ title = {The CIDOC conceptual reference module: an ontological approach to semantic interoperability of metadata},
+ journal = {AI Mag.},
+ volume = {24},
+ number = {3},
+ year = {2003},
+ issn = {0738-4602},
+ pages = {75--92},
+ publisher = {American Association for Artificial Intelligence},
+ address = {Menlo Park, CA, USA},
+ }
+
+
+@inproceedings{726141,
+ author = {Lagoze, Carl and Hunter, Jane},
+ title = {The ABC Ontology and Model},
+ booktitle = {DCMI '01: Proceedings of the International Conference on Dublin Core and Metadata Applications 2001},
+ year = {2001},
+ isbn = {4-924600-98-9},
+ pages = {160--176},
+ publisher = {National Institute of Informatics, Tokyo, Japan},
+ }
+
+ 
+@inproceedings{DBLP:conf/coopis/GangemiM03,
+  author    = {Aldo Gangemi and
+               Peter Mika},
+  title     = {Understanding the Semantic Web through Descriptions and
+               Situations},
+  booktitle = {CoopIS/DOA/ODBASE},
+  year      = {2003},
+  pages     = {689-706},
+  ee        = {http://springerlink.metapress.com/openurl.asp?genre=article{\&}issn=0302-9743{\&}volume=2888{\&}spage=689},
+  crossref  = {DBLP:conf/coopis/2003},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@proceedings{DBLP:conf/coopis/2003,
+  editor    = {Robert Meersman and
+               Zahir Tari and
+               Douglas C. Schmidt},
+  title     = {On The Move to Meaningful Internet Systems 2003: CoopIS,
+               DOA, and ODBASE - OTM Confederated International Conferences,
+               CoopIS, DOA, and ODBASE 2003, Catania, Sicily, Italy, November
+               3-7, 2003},
+  booktitle = {CoopIS/DOA/ODBASE},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {2888},
+  year      = {2003},
+  isbn      = {3-540-20498-9},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+
+
+
+@TechReport{oai:CiteSeerPSU:426513,
+  title =	"A Reusable Time Ontology",
+  author =	"Qing Zhou and Richard Fikes",
+  abstract =	"In this paper we present a reusable time ontology for
+		 large-scale knowledge system applications, that is
+		 intuitive, expressive, formally defined, logically
+		 consistent, and ready-to-use. Our underlying time
+		 theory treats both time points and time intervals as
+		 primitive elements on a time line, and the ontology
+		 contains a class hierarchy, relations, axioms and
+		 instances built on those primitives. The main
+		 contributions of this work are the following three. (1)
+		 The ontology makes a distinction between closed and
+		 open intervals, as opposed to many previous time
+		 ontologies. However we provide flexibility of usage by
+		 providing two sets of relations on intervals: one that
+		 assumes that distinction and one that does not. (2)
+		 Time granularity is implemented in the ontology to
+		 facilitate representing time in varying granularity in
+		 a layered model and switching from or relating one
+		 granularity to a coarser/finer one. (3) The ontology
+		 includes classes for calendar months, calendar days and
+		 weekdays...",
+  citeseer-references = "oai:CiteSeerPSU:50448; oai:CiteSeerPSU:46397;
+		 oai:CiteSeerPSU:407698; oai:CiteSeerPSU:520415",
+  annote =	"Qing Zhou (Knowledge Systems Laboratory , Stanford
+		 University; Stanford , CA , 94305); Richard Fikes
+		 (Knowledge Systems Laboratory , Stanford University;
+		 Stanford , CA , 94305);",
+  bibsource =	"OAI-PMH server at cs1.ist.psu.edu",
+  language =	"en",
+  oai =  	"oai:CiteSeerPSU:426513",
+  rights =	"unrestricted",
+  URL =  	"http://citeseer.ist.psu.edu/426513.html;
+		 ftp://ftp.ksl.stanford.edu/pub/KSL_Reports/KSL-00-01.ps",
+}
+
+@incollection{citeulike:1923937,
+  author = {Chunxia Zhang and Cungen Cao and Yuefei Sui and Zhendong Niu},
+  interHash = {7d6e6344b5cbfb63d8bf5411a6e5ef39},
+  intraHash = {0ca0e40110cb1d942331910eb7302223},
+  journal = {Knowledge Science, Engineering and Management},
+  pages = {575--580},
+  title = {A Chinese Time Ontology},
+  year = {2007},
+  id = {1923937},
+  priority = {3},
+  at = {2007-11-15 20:58:43},
+  doi = {10.1007/978-3-540-76719-0\_61},
+  abstract = {Temporal knowledge representation and identification are crucial in many application areas, such as Semantic Web, knowledge sharing and reusing, and natural language processing. Building time ontologies has been viewed as a promising means to solve this task. However, practical time ontology is closely related with specific nations and cultures, though they may share a common part. In this paper, we present a Chinese time ontology for web services and knowledge systems which involve Chinese temporal entities and temporal properties. First we define a core component called the base time ontology. Upon this base time ontology, we build the other part of the Chinese time ontology, which includes temporal measurement and representation in Chinese specific ways, and transformation between temporal entities in the Chinese time ontology and the DAML time ontology. We argue that the base time ontology is not only a basic and integral part of the Chinese time ontology, but also a base for constructing other time ontologies as well.}
+}
+
+
+@article{DBLP:journals/talip/HobbsP04,
+  author    = {Jerry R. Hobbs and
+               Feng Pan},
+  title     = {An ontology of time for the semantic web},
+  journal   = {ACM Trans. Asian Lang. Inf. Process.},
+  volume    = {3},
+  number    = {1},
+  year      = {2004},
+  pages     = {66-85},
+  ee        = {http://doi.acm.org/10.1145/1017068.1017073},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+@inproceedings{DBLP:conf/giscience/WorboysH04,
+  author    = {Michael F. Worboys and
+               Kathleen Hornsby},
+  title     = {From Objects to Events: GEM, the Geospatial Event Model},
+  booktitle = {GIScience},
+  year      = {2004},
+  pages     = {327-344},
+  ee        = {http://springerlink.metapress.com/openurl.asp?genre=article{\&}issn=0302-9743{\&}volume=3234{\&}spage=327},
+  crossref  = {DBLP:conf/giscience/2004},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@proceedings{DBLP:conf/giscience/2004,
+  editor    = {Max J. Egenhofer and
+               Christian Freksa and
+               Harvey J. Miller},
+  title     = {Geographic Information Science, Third International Conference,
+               GIScience 2004, Adelphi, MD, USA, October 20-23, 2004, Proceedings},
+  booktitle = {GIScience},
+  publisher = {Springer},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {3234},
+  year      = {2004},
+  isbn      = {3-540-23558-2},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+@article{1262229,
+ author = {Westermann, Utz and Jain, Ramesh},
+ title = {Toward a Common Event Model for Multimedia Applications},
+ journal = {IEEE MultiMedia},
+ volume = {14},
+ number = {1},
+ year = {2007},
+ issn = {1070-986X},
+ pages = {19--29},
+ doi = {http://dx.doi.org/10.1109/MMUL.2007.23},
+ publisher = {IEEE Computer Society Press},
+ address = {Los Alamitos, CA, USA},
+ }
+
+
+@inproceedings{DBLP:conf/kr/GrauPSK06,
+  author    = {Bernardo Cuenca Grau and
+               Bijan Parsia and
+               Evren Sirin and
+               Aditya Kalyanpur},
+  title     = {Modularity and Web Ontologies},
+  booktitle = {KR},
+  year      = {2006},
+  pages     = {198-209},
+  crossref  = {DBLP:conf/kr/2006},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@proceedings{DBLP:conf/kr/2006,
+  editor    = {Patrick Doherty and
+               John Mylopoulos and
+               Christopher A. Welty},
+  title     = {Proceedings, Tenth International Conference on Principles
+               of Knowledge Representation and Reasoning, Lake District
+               of the United Kingdom, June 2-5, 2006},
+  booktitle = {KR},
+  publisher = {AAAI Press},
+  year      = {2006},
+  isbn      = {978-1-57735-271-6},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+
+@book{StuckenschmidtParentSpaccapietra2009,
+  address = {Berlin},
+  editor = {Heiner Stuckenschmidt and Christine Parent and Stefano Spaccapietra},
+  interHash = {abaa570522edef36c2903af8e99c8423},
+  intraHash = {c3ef675825c07e626f3279765419e197},
+  publisher = {Springer},
+  series = {Lecture Notes in Computer Science},
+  title = {Modular Ontologies: Concepts, Theories and Techniques for Knowledge
+	Modularization},
+  volume = {5445},
+  year = {2009},
+  timestamp = {2009.06.02},
+  isbn = {978-3-642-01906-7},
+  owner = {flint},
+  doi = {http://dx.doi.org/10.1007/978-3-642-01907-4},
+  abstract = {This book constitutes a collection of research achievements mature
+	enough to provide a firm and reliable basis on modular ontologies.
+	It gives the reader a detailed analysis of the state of the art of
+	the research area and discusses the recent concepts, theories and
+	techniques for knowledge modularization.
+	
+	
+	The 13 papers presented in this book were all carefully reviewed before
+	publication. They have been organized in three parts: Part I gives
+	a general introduction to the idea and issues characterizing modularization
+	and offers an in-depth analysis of properties, criteria and knowledge
+	import techniques for modularization. Part II describes four major
+	research proposals for creating modules from an existing ontology
+	either by partitioning an ontology into a collection of modules or
+	by extracting one or more modules from the ontology. Part III reports
+	on collaborative approaches where modules that pre-exist are linked
+	together through mappings to form a virtual large ontology.}
+}
+
+
+
+@book{GasevicDjuricDevedzic09,
+  address = {Berlin},
+  author = {Dragan Gaševic and Dragan Djuric and Vladan Devedžic},
+  edition = {2.},
+  interHash = {8f0fc55cc546eacb9c34204d2f959603},
+  intraHash = {366cf0c4c02288cb9adf7e592628b0cd},
+  publisher = {Springer},
+  title = {Model Driven Engineering and Ontology Development},
+  url = {http://www.springer.com/computer/programming/book/978-3-642-00281-6},
+  year = {2009},
+  timestamp = {2009.09.11},
+  file = {Springer Product page:http\://www.springer.com/978-3-642-00281-6:URL;Amazon Search inside:http\://www.amazon.de/gp/reader/3642002811/:URL;Google Books:http\://books.google.de/books?isbn=978-3-642-00281-6:URL},
+  isbn = {978-3-642-00281-6},
+  owner = {flint},
+  doi = {http://dx.doi.org/10.1007/978-3-642-00282-3},
+  abstract = {Defining a formal domain ontology is generally considered a useful,
+	not to say necessary step in almost every software project. This
+	is because software deals with ideas rather than with self-evident
+	physical artefacts. However, this development step is hardly ever
+	done, as ontologies rely on well-defined and semantically powerful
+	AI concepts such as description logics or rule-based systems, and
+	most software engineers are largely unfamiliar with these.
+	
+	
+	Gasevic and his co-authors try to fill this gap by detailing how to
+	use model-driven engineering for ontology development on the Semantic
+	Web. Part I of their book describes existing technologies, tools,
+	and standards like XML, RDF, OWL, MDA, and UML. Part II presents
+	the first detailed description of OMG's new ODM (Ontology Definition
+	Metamodel) initiative, a specification which is expected to be in
+	the form of an OMG language like UML. Finally, Part III is dedicated
+	to applications and practical aspects of developing ontologies using
+	MDA-based languages.
+	
+	
+	For this second edition, the descriptions of the related standards
+	(like MOF, ODM, OCL, and OWL) have been revised and updated; new
+	chapters introducing the basic principles of model-driven engineering,
+	recent research results on metamodeling Semantic Web rule languages,
+	an introduction to the Atlas Transformation Language (ATL) and its
+	tool support, and, last but not least, many new examples have been
+	added.}
+}
+
+
+
+@InProceedings{conf/semweb/RuotsaloH07,
+  title =	"An Event-Based Approach for Semantic Metadata
+		 Interoperability",
+  author =	"Tuukka Ruotsalo and Eero Hyv{\"o}nen",
+  bibdate =	"2007-10-29",
+  bibsource =	"DBLP,
+		 http://dblp.uni-trier.de/db/conf/semweb/iswc2007.html#RuotsaloH07",
+  booktitle =	"ISWC/ASWC",
+  booktitle =	"The Semantic Web, 6th International Semantic Web
+		 Conference, 2nd Asian Semantic Web Conference, {ISWC}
+		 2007 + {ASWC} 2007, Busan, Korea, November 11-15,
+		 2007",
+  publisher =	"Springer",
+  year = 	"2007",
+  volume =	"4825",
+  editor =	"Karl Aberer and Key-Sun Choi and Natasha Fridman Noy
+		 and Dean Allemang and Kyung-Il Lee and Lyndon J. B.
+		 Nixon and Jennifer Golbeck and Peter Mika and Diana
+		 Maynard and Riichiro Mizoguchi and Guus Schreiber and
+		 Philippe Cudr{\'e}-Mauroux",
+  ISBN = 	"978-3-540-76297-3",
+  pages =	"409--422",
+  series =	"Lecture Notes in Computer Science",
+  URL =  	"http://dx.doi.org/10.1007/978-3-540-76298-0_30",
+}
+
+
+
+@InProceedings{conf/dexa/RuotsaloH07,
+  title =	"A Method for Determining Ontology-Based Semantic
+		 Relevance",
+  author =	"Tuukka Ruotsalo and Eero Hyv{\"o}nen",
+  bibdate =	"2007-08-27",
+  bibsource =	"DBLP,
+		 http://dblp.uni-trier.de/db/conf/dexa/dexa2007.html#RuotsaloH07",
+  booktitle =	"DEXA",
+  booktitle =	"Database and Expert Systems Applications, 18th
+		 International Conference, {DEXA} 2007, Regensburg,
+		 Germany, September 3-7, 2007, Proceedings",
+  publisher =	"Springer",
+  year = 	"2007",
+  volume =	"4653",
+  editor =	"Roland Wagner and Norman Revell and G{\"u}nther
+		 Pernul",
+  ISBN = 	"978-3-540-74467-2",
+  pages =	"680--688",
+  series =	"Lecture Notes in Computer Science",
+  URL =  	"http://dx.doi.org/10.1007/978-3-540-74469-6_66",
+}
+
+
+
+
+@InProceedings{conf/esws/HyvonenMKAKRSTPKVTPFSPLN09,
+  title =	"CultureSampo: {A} National Publication System of
+		 Cultural Heritage on the Semantic Web 2.0",
+  author =	"Eero Hyv{\"o}nen and Eetu M{\"a}kel{\"a} and Tomi
+		 Kauppinen and Olli Alm and Jussi Kurki and Tuukka
+		 Ruotsalo and Katri Sepp{\"a}l{\"a} and Joeli Takala and
+		 Kimmo Puputti and Heini Kuittinen and Kim Viljanen and
+		 Jouni Tuominen and Tuomas Palonen and Matias Frosterus
+		 and Reetta Sinkkil{\"a} and Panu Paakkarinen and Joonas
+		 Laitio and Katariina Nyberg",
+  bibdate =	"2009-05-23",
+  bibsource =	"DBLP,
+		 http://dblp.uni-trier.de/db/conf/esws/eswc2009.html#HyvonenMKAKRSTPKVTPFSPLN09",
+  booktitle =	"ESWC",
+  booktitle =	"The Semantic Web: Research and Applications, 6th
+		 European Semantic Web Conference, {ESWC} 2009,
+		 Heraklion, Crete, Greece, May 31-June 4, 2009,
+		 Proceedings",
+  publisher =	"Springer",
+  year = 	"2009",
+  volume =	"5554",
+  editor =	"Lora Aroyo and Paolo Traverso and Fabio Ciravegna and
+		 Philipp Cimiano and Tom Heath and Eero Hyv{\"o}nen and
+		 Riichiro Mizoguchi and Eyal Oren and Marta Sabou and
+		 Elena Paslaru Bontas Simperl",
+  ISBN = 	"978-3-642-02120-6",
+  pages =	"851--856",
+  series =	"Lecture Notes in Computer Science",
+  URL =  	"http://dx.doi.org/10.1007/978-3-642-02121-3",
+}
+
+
+
+@InProceedings{conf/aime/GibertVC07,
+  title =	"Enlarging a Medical Actor Profile Ontology with New
+		 Care Units",
+  author =	"Karina Gibert and A{\"i}da Valls and Joan Casals",
+  publisher =	"Springer",
+  year = 	"2007",
+  volume =	"4924",
+  bibdate =	"2008-03-03",
+  bibsource =	"DBLP,
+		 http://dblp.uni-trier.de/db/conf/aime/k4care2007.html#GibertVC07",
+  booktitle =	"K4CARE",
+  editor =	"David Ria{\~n}o",
+  ISBN = 	"978-3-540-78623-8",
+  pages =	"101--116",
+  series =	"Lecture Notes in Computer Science",
+  URL =  	"http://dx.doi.org/10.1007/978-3-540-78624-5_8",
+}
+
+
+@Misc{oai:CiteSeerXPSU:10.1.1.60.2685,
+  title =	"An Ontology For Agent-Based Modeling And Simulation",
+  author =	"Scott Christley Xiaorong and Xiaorong Xiang and Greg
+		 Madey",
+  year = 	"2004",
+  abstract =	"Ontologies are a formal methodology for establishing a
+		 common vocabulary, for defining the concepts and
+		 relationships between those concepts of a particular
+		 domain, and for reasoning about the objects, behaviors,
+		 and knowledge that comprises the domain. In this paper,
+		 we present an ontology for agent-based modeling and
+		 simulation. Agent-based modeling and simulation has
+		 become an important and popular paradigm for the
+		 computational social and natural sciences; however, the
+		 application of this paradigm tends to be performed in
+		 an ad-hoc fashion leading to questions about underlying
+		 assumptions in an agent-based model, verification of
+		 the software implementation as a representation of that
+		 model, and validation of hypothesized conclusions
+		 inferred from data produced by computer simulation
+		 experiments. An ontology provides a formal, logical
+		 knowledge representation that supports automated
+		 reasoning. Such reasoning capability provides for
+		 consistency checking of the concepts and relationships
+		 in an agent-based model, can infer the assumptions
+		 inherent in a model, can infer the assumptions and the
+		 parameters inherent in a simulation or software
+		 representation of a model, and can enforce adherence to
+		 formal methods or best practices for verification and
+		 validation testing. These reasoning tasks direct, or at
+		 least inform, the modeler about relevant techniques and
+		 methods in the agent-based paradigm. The reasoning
+		 capability also provides a framework for automated
+		 generation of software code, automated design and
+		 execution of simulation experiments as well as
+		 automated generation and execution of validation tests
+		 for those experiments. Using the standard Ontology Web
+		 Language (OWL), we provide a complete, detailed
+		 ontology of agent-based modeling and simulation, and we
+		 show ho...",
+  bibsource =	"OAI-PMH server at citeseerx.ist.psu.edu",
+  contributor =  "CiteSeerX",
+  language =	"en",
+  oai =  	"oai:CiteSeerXPSU:10.1.1.60.2685",
+  relation =	"10.1.1.18.5755; 10.1.1.11.5960",
+  rights =	"Metadata may be used without restrictions as long as
+		 the oai identifier remains attached to it.",
+  subject =	"Agent-based Modeling; Agent-based Simulation;
+		 Automated Reasoning; Ontology; Artificial Intelligence;
+		 Discrete-Event Simulation",
+  URL =  	"http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.60.2685;
+		 http://www.nd.edu/~schristl/papers/ontology_agent2004.pdf",
+}
+
+
+
+@Misc{oai:agentlink.org:5561,
+  title =	"Agent{OWL} - Agents with {OWL} ontology models using
+		 {JADE} agent system and Jena",
+  author =	"Michal Laclavik",
+  year = 	"2005",
+  bibsource =	"OAI-PMH server at eprints.agentlink.org",
+  description =  "AgentOWL library was developed to support RDF/OWL
+		 ontology models in JADE agent system. The library use
+		 Jena for ontology model manipulation.",
+  oai =  	"oai:agentlink.org:5561",
+  subject =	"DA Development and Application Areas; 3.2 Programming
+		 languages, tools, and libraries for agent system
+		 development",
+  type = 	"Software; NonPeerReviewed",
+  URL =  	"http://eprints.agentlink.org/5561/;
+		 http://agentowl.sourceforge.net/",
+}
+
+@InProceedings{conf/esws/PedrinaciDM08,
+  title =	"A Core Ontology for Business Process Analysis",
+  author =	"Carlos Pedrinaci and John Domingue and Ana Karla Alves
+		 de Medeiros",
+  bibdate =	"2008-05-27",
+  bibsource =	"DBLP,
+		 http://dblp.uni-trier.de/db/conf/esws/eswc2008.html#PedrinaciDM08",
+  booktitle =	"ESWC",
+  booktitle =	"The Semantic Web: Research and Applications, 5th
+		 European Semantic Web Conference, {ESWC} 2008,
+		 Tenerife, Canary Islands, Spain, June 1-5, 2008,
+		 Proceedings",
+  publisher =	"Springer",
+  year = 	"2008",
+  volume =	"5021",
+  editor =	"Sean Bechhofer and Manfred Hauswirth and J{\"o}rg
+		 Hoffmann and Manolis Koubarakis",
+  ISBN = 	"978-3-540-68233-2",
+  pages =	"49--64",
+  series =	"Lecture Notes in Computer Science",
+  URL =  	"http://dx.doi.org/10.1007/978-3-540-68234-9_7",
+}
+
+
+@InProceedings{ncstrl.ustuttgart_fi//INPROC-2007-23,
+  cr-category =  "H.4.1 Office Automation",
+  language =	"English",
+  publisher =	"Innsbruck: CEUR Workshop Proceedings",
+  year = 	"2007",
+  keywords =	"Business Process Management (BPM), Business Process
+		 Execution Language (BPEL), Semantic Business Process
+		 Management (SBPM),Ontologies, WSML",
+  ISBN = 	"ISSN: 1613-0073",
+  pages =	"52--63",
+  editor =	"Martin Hepp",
+  editor =	"Knut Hinkelmann",
+  editor =	"Dimitris Karagiannis",
+  editor =	"R{\"u}diger Klein",
+  editor =	"Nenad Stojanovic",
+  notes =	"; citation: An Ontology for Executable Business
+		 Processes. In: Hepp, Martin (ed.); Hinkelmann, Knut
+		 (ed.); Karagiannis, Dimitris (ed.); Klein, R{\"u}diger
+		 (ed.); Stojanovic, Nenad (ed.): Proceedings of the
+		 Workshop on Semantic Business Process and Product
+		 Lifecycle Management (SBPM 2007) held in conjunction
+		 with the 3rd European Semantic Web Conference (ESWC
+		 2007) Innsbruck, Austria, June 7, 2007",
+  series =	"Artikel in Tagungsband",
+  institution =  "Universit{\"a}t Stuttgart, Fakult{\"a}t Informatik,
+		 Elektrotechnik und Informationstechnik, Germany",
+  author =	"J{\"o}rg Nitzsche and Daniel Wutke and Tammo van
+		 Lessen",
+  month =	jun # " 7,",
+  type = 	"Article in Proceedings",
+  abstract =	"The Web Service Business Process Execution Language
+		 (WSBPEL) is the de facto standard for describing
+		 workflow-like compositions of Web services, so-called
+		 Web service orchestrations. In this paper an ontology
+		 for executable BPEL processes is presented, which
+		 reflects both the natural language description and the
+		 syntax given in the specification. The ontology makes
+		 BPEL process models accessible at a semantic level and
+		 thus to intelligent queries and machine reasoning.",
+  title =	"An Ontology for Executable Business Processes",
+  booktitle =	"Proceedings of the Workshop on Semantic Business
+		 Process and Product Lifecycle Management (SBPM 2007)
+		 held in conjunction with the 3rd European Semantic Web
+		 Conference (ESWC 2007) Innsbruck, Austria, June 7,
+		 2007",
+  bibdate =	"July 5, 2007",
+}
+
+
+
+@inproceedings{753964,
+ author = {Haarslev, Volker and M\"{o}ller, Ralf},
+ title = {RACER System Description},
+ booktitle = {IJCAR '01: Proceedings of the First International Joint Conference on Automated Reasoning},
+ year = {2001},
+ isbn = {3-540-42254-4},
+ pages = {701--706},
+ publisher = {Springer-Verlag},
+ address = {London, UK},
+ }
+
+
+@ARTICLE{Borgida03distributeddescription,
+    author = {Alex Borgida and Luciano Serafini},
+    title = {Distributed Description Logics: Assimilating Information from Peer Sources},
+    journal = {Journal of Data Semantics},
+    year = {2003},
+    volume = {1},
+    pages = {2003}
+}
+
+
+@ARTICLE{chandrase99,
+	author = {B. Chandrasekaran and John R. Josephson and V. Richard Benjamins},
+	title = {What Are Ontologies, and Why Do We Need Them?},
+	journal ={IEEE Intelligent Systems},
+	volume = {14},
+	issn = {1094-7167},
+	year = {1999},
+	pages = {20-26},
+	publisher = {IEEE Computer Society},
+	address = {Los Alamitos, CA, USA}
+}
+
+@inproceedings{methontology,
+ author    = "Mariano Fernandez and Asuncion Gomez-Perez and Natalia Juristo",
+ title     = "METHONTOLOGY: from Ontological Art towards Ontological Engineering",
+ year      = "1997",
+ month     = "March",
+ booktitle = "Proceedings of the AAAI97 Spring Symposium 
+              Series on Ontological Engineering",
+ pages     = "33--40",
+ address   = "Stanford, USA"
+}
+
+@inproceedings{bontas2005-1,
+  author = {Elena Paslaru Bontas and Malgorzata Mochol and Robert Tolksdorf},
+  title = {Case Studies on Ontology Reuse},
+  booktitle = {Proceedings of the 5th International Conference on Knowledge Management},
+  year = {2005}
+}
+
+@inproceedings{bontas2005-2,
+  author ={Elena Paslaru Bontas and Malgorzata Mochol},
+  title = {Towards a reuse-oriented methodology for ontology engineering},
+  booktitle = {Proceedings of the 7th International Conference on Terminology and Knowledge Engineering TKE 2005},
+  year = {2005},
+}

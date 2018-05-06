@@ -1,0 +1,111 @@
+\documentclass[runningheads,a4paper]{llncs}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{times}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amssymb}  
+\usepackage[ansinew]{inputenc}  
+\usepackage{soul}  
+\usepackage{nameref}  
+\usepackage{amsbsy}  
+\usepackage{bezier}  
+\usepackage{colortbl}  
+\usepackage[leqno,fleqn]{amsmath}  
+\usepackage{verbatim}
+\usepackage{listings}
+
+\setcounter{tocdepth}{3}
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+\begin{document}
+\mainmatter
+
+\title{Hybrid Data Fusion for Semantic Event Processing}
+\subtitle{Challenge Paper}
+
+\author{Kia Teymourian \and Adrian Paschke}
+
+\institute{
+Freie Universit\"at Berlin\\ Institut for Computer Science \\ AG Corporate Semantic Web \\
+K\"onigin-Luise-Str. 24/26, 14195 Berlin, Germany\\  \{kia, paschke\}@inf.fu-berlin.de \\
+\url{http://www.inf.fu-berlin.de/ag-csw}
+}
+
+\maketitle
+\begin{abstract}
+Many of real-world events cannot be processed by the existing event processing systems because they are too complex to be understood and processed by the systems. Complex events can be inferred from raw primitive events based on their incoming sequence, their syntax and semantics. Usage of ontological knowledge about events and their relationship to other non-event concepts in the application domain, can improve the quality of event processing. In this paper, we present a solution for knowledge-based event entity extraction based on the background knowledge. Based on the DeRiVE Workshop dataset, we use links to external knowledge-bases which provide background knowledge about them and help the processing engine to understand the meaning of upcoming event entities.
+\end{abstract}
+
+\keywords{Complex Event Processing, Ontology,  CEP, Semantic CEP}
+
+\section{Introduction}
+The reality in many business organizations is that some of the important complex events can't be used in process management, because they are not detected from the work-flow data and the decision makers could not be informed about them. Detection of events is one of the critical factors for the event-driven systems and business process management. Semantic models of events can improve the quality of event processing by using event meta-data in combination with ontologies and rules (knowledge bases). The success of the Semantic Web research community in building standards and tools for semantic technologies such as formalized vocabularies/ontologies and declarative rules, are opening novel research and application areas. One of these promising application areas is semantic event processing.
+
+Previously, we proposed in \cite{TeymourianDEBS09,TeymourianRuleML09} a new approach for the Semantic enabled Complex Event Processing (SCEP). We claim that semantic models of events can improve the quality of event processing by using event data in combination with knowledge bases. Ontologies play an important key role in the SCEP, because they are the conceptualize of the application domain and they allow reasoning on events in combination with other related concepts.
+
+In this paper, we two methods for event processing methods for knowledge based event processing which are used to extract complex event entities from the stream of events. We use the provided workshop data set to demonstrate how these event processing methods can be used to build up intelligent event processing systems. 
+The rest of the this paper is organized as follows: We firstly provide a high-level overview about the existing event processing methods and then in section describe our two methods for event processing which include data fusion with the background knowledge base. In Section \ref{}, we focus on use case of these method and show which kind of event can be detected from the workshop data set using DPpedia as an external knowledge base. Finally, 
+
+
+\section{Event Processing Methods}
+The existing methods for event processing can be categorized into two main categories, logic-based approaches and non-logic-based approaches. Based on these mechanisms several research prototypes are implemented for complex event processing. Some of the event processing approaches are based on the formalizations such as Finite State Automata \cite{Gehani92}, Event-Graph \cite{Chakravarthy94} or Petri Nets \cite{Gatziu94detectingcompositeevents}. 
+
+A survey and requirements analysis about the event processing methods is provided in \cite{Schmidt2008b}. The existing methods for event processing can be categorized into two main categories, logic-based approaches and non-logic-based approaches. Based on these mechanisms several research prototypes are implemented for complex event processing. Some of the event processing approaches are based on the formalizations such as finite state automata \cite{Gehani92}, event-graph \cite{Chakravarthy:1994:SEE:197053.197054} or petri nets \cite{Gatziu94detectingcompositeevents}. One of the logic-based approaches is introduced in \cite{DBLP:journals/corr/abs-1008-0823} which proposes a homogeneous reaction rule language for complex event processing. It is a combinatorial approach of event and action processing, formalization of reaction rules in combination with other rule types such as derivation rules, integrity constraints, and transactional knowledge. One of the logic-based approaches is introduced in \cite{paschkerule07} which proposes a homogeneous reaction rule language for complex event processing. It is a combinatorial approach of event and action processing, formalization of reaction rules in combination with other rule types such as derivation rules, integrity constraints, and transactional knowledge.
+
+\begin{itemize}
+
+\item \textbf{Event Processing Approach}
+For the integration and aggregation of the background domain knowledge with the incoming event stream and the timely processing of the whole knowledge a highly scalable and real time processing approach is required. Specially the inferencing on the huge amount of the background knowledge can badly effect the processing time. In the following, We discuss the different possible processing approaches and describe their different pros and cons. At the end we introduce my own approach for the processing of events. 
+
+\item \textbf{Storage-based Realization}
+The basic and more naive approach might be the storage of the incoming event data on a database and steady querying and pulling of the database. The events can be processed first after their storage on a database. The main disadvantaged of this approach is that the processing is only after storage possible and database are pulled with each new incoming event. This approach can work for use cases which do not have high event throughput and huge amount of background knowledge to process. The advantage of this approach is that a complete reasoning on the whole knowledge inventory is possible. The scalability and real time processing are the problems of this approach which makes it impossible to use it for time-sensitive use cases like algorithmic trading, or fraud-detection systems. The usage of distributed databases can improve the scalability but it can badly effect the performance.
+
+\item  \textbf{Rule Engines}
+The most existing approaches for event processing use a rule engine for the processing of events without the permanent storage of events, the storage of historical event data is only optional for other purposes. The event data stream can easy be moved throughout the system without any necessary storage. The rule-based event processing engines can process the events in real time, because they can handle the whole facts and rules in the main processing memory. But these approaches can not achieve high scalability and high performance, when they have to process huge amount of domain background knowledge and use the available knowledge for the event detections. The main problem here is that they have to keep the whole knowledge base in the main processing memory, and this will be impossible when the background knowledge are huge, e.g., all of the background knowledge about the companies traded on the stock exchange market world wide.
+\end{itemize}
+
+\subsection{Semantic Enrichment of Event Stream (SEES)}
+One of the possible approaches is to use the existing rule-based event processing engines and do a normal syntactic processing on events, but enrich the event stream with new derived events. These derived events are generated from the raw events and are just processed for the internal usage, e.g., if the price of OPEL company is changed the system can generate several internal events like, price of an automobile company is changed, price of company who produces in Germany is changed, and so on. Knowledge can be used by event mapping agents (EMAs) to generate the derived events by reasoning on the knowledge base. The mapping agents can be replicated to achieve better scalability. In the next step, the enriched event stream can be monitored by several event processing agents which have the complex event query and can process the complex query. The main disadvantage of the semantic enrichment of events can be the management of huge amount of the derived event data which are produced by incoming of each new event and should be processed by the final event processing agent to match the complex query. This can badly effect the performance of the system. 
+
+\textbf{Example-1}: 
+
+\subsection{Complex Event Query Pre-Processing}
+In this section, we describe my approach for the realization of SCEP engine by pre-processing of complex event queries. We propose Event Query Pre-Processing (EQPP) which means that the complex query is pre-processed before the query is executed against the incoming stream event data. The original complex event query $Q_a$ is pre-processed under the usage of a knowledge base and divided into a set of simple event queries like $\{q_1,...q_n\}$. A simple query is here a query which can be processed only with the information from the event stream and there is no need for using background knowledge. The extracted queries are not similar to the queries which are produced in query expansion approaches, because by the query expansion other new queries are derived which are not given in the main query. But in EQPP the new are only a partial queries of the complete query, the answer of each of the new queries might not be the result of the whole query.  
+
+The complex query $Q_a$ can be considered as a propositional formula which can be converted to conjunctive normal form (CNF) $Q_a \leftarrow  q_1 \wedge ... \wedge q_n$, i.e., if all of the simple queries are given, then the complex event query is satisfied. The pre-processing is done by a processing agent which can access the knowledge base and divide the complex query to several simple queries. Event query can be divide into several concrete queries which includes the names of companies but not use the pattern which includes ontology specific concepts. The complex query $Q_a$ can also be mapped in disjunctive normal form (DNF) $Q_a \leftarrow  q_1 \vee ... \vee q_n$, i.e., if one of the simple queries are given, then the complex event query is satisfied. Complex query might also be mapped to a combination of both disjunctive and conjunctive of simple queries.
+
+Note, as an event instance base for detecting complex events according to the detection patterns, which are formalized in terms of the event algebra operators as exemplified above, the (distributed) RDF storage clusters are used as active working memory (active knowledge base). The rule-based event algebra meta program queries event data via Prova's SPARQL query built-ins as event facts from the RDF clusters. Using triple store technology this dynamic integration approach is highly efficient. This approach is quite similar to using relational databases as event database, but with the major benefit of providing semantic event meta data and built-in ontological inference.
+
+The Prova (\url{http://prova.ws}) reaction rule language with the interval-based Event Calculus meta program formalization is used on the PSM layer as a concrete rule-based execution and event processing engine. Several Prova rule engines can be deployed as distributed web-based inference services on the ESB (\url{http://responder.ruleml.org}). The Prova rule engines have dynamic access to external data sources and object representations, e.g. using semantic triple stores as active event data stores. The quasi-standard RuleML/Reaction RuleML (\url{http://reaction.ruleml.org}) is used on the PIM layer as a standardized interchange format between the distributed rule inference engine on the ESB. The ESB is used as object service broker for the rule inference services and as asynchronous messaging middleware supporting all common transport protocols such JMS, HTTP or SOAP (or Rest) (more than 30 protocols are supported) between the services. For an visual RuleML/Reaction RuleML editor on the CIM layer see \cite{Paschke2007}.
+
+\textbf{Example-2}: 
+
+
+\section{Experiments}
+
+\section{Demonstration}
+We provide a demonstration of the two approaches for the event data fusion. 
+
+\section{Conclusion and Outlook}
+We described the main research challenge of our research and introduced some of our initial effort on semantic event processing approach. The main idea of my dissertation is to use the ontological knowledge in combination with traditional event processing and stream processing to achieve more
+intelligent detection and processing of events.
+
+Our future steps are to work on more details of knowledge representation for events, situations, actions, and other related concepts. 
+We have to work on semantic of event processing languages, and define which semantics can be an adequate semantic for event processing. 
+Furthermore, there is need to find out adequate algorithms for mapping of complex queries to simple queries which can be processing by syntactic event processing engines.
+
+\section{Acknowledgements}
+
+This work has been partially supported by the ``InnoProfile-Corporate Semantic
+Web" project funded by the German Federal Ministry of Education and Research
+(BMBF) and the BMBF Innovation Initiative for the New German L\"ander -
+Entrepreneurial Regions.
+
+\bibliographystyle{plain}
+\bibliography{literature}
+
+\end{document}
