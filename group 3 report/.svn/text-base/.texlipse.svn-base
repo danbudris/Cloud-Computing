@@ -1,0 +1,13 @@
+#TeXlipse project settings
+#Tue Jul 26 11:41:32 CEST 2011
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=main-derive2011-challenge.tex
+outputFile=main-derive2011-challenge.pdf
+langSpell=en
+markDer=true
+srcDir=
