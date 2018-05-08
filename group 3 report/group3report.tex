@@ -1,4 +1,6 @@
 \documentclass[runningheads,a4paper]{llncs}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
 
 \usepackage{amssymb}
 \usepackage{url}
@@ -77,17 +79,59 @@ The paper being reviewed provides an in-depth experimental analysis which justif
 In this section, we'll discuss how the experimental results were obtained,  then walk through the major metrics explore: cell compation, cell sharing, cell segregation,  the impact of large cells, resource requests and reclamation.  
 
 The experimental results for this paper were obtained by taking months-long traces of running Borg cells (clusters), and then using 'Fauxmaster' a high-fidelity Borgmaster replica, to replay the traces with various policy and configuration changes applied.  The results were then compared across numerous metrics and existing performance to determine the most resource and cost effective manner to operate the system and obtain justification for the existing policy choices. 
- 
+
 \subsection{Cell Compaction} 
 Cell compation is the metric by which all of the policies of borg, explained later in this presentation, were evaluated.  Since jobs vary widely in their constraints and features, it was believed that Average Cell Utilization was not an adequate metric.  Load spikes, black swan events, and the execution of low-priority jobs in empty resource space needed to be taken into account in determing the best policies and algorithms.  Instead, this paper focused on ‘cell compaction, and which policies would provide the greatest possibilities of cell compaction given the existing configuration.  Cell compaction is how small a given workload can be packed into a cell based on the policies applied to it.  Greater compaction means more workloads can be loaded into smaller cells, meaning that a smaller percentage of the cell is required the greater the compaction is achieved.  The below policies and algorithms are used to maximize cell compaction and, thus, provide the greatest efficiency and cost-savings.
 
-\subsection{Cell Sharing} 
 
-\subsection{Cell Segregation} 
+\subsection{Cell Sharing} 
+Borg manages about 83% of entire set of mahcines that runs prod, non-prod task at the same time. prod is long running service that should never die such as google search, gmail, google doc.
+Non-prod is service that takes couple seconds to several day to complete. Other companies usually use prod(user services) and non-prod(batch jobs) in seperate clusters. 
+It requires 20~30% more machines to run separate cluster.
+Borg can reduce the number of machines used becaues it handles most non-prod jobs using unused resources.
+
+\includegraphics{segregation}
+from the graph, left one is combined workload and right one is segregated. three of segregated cases are over the cell limit.
+
+\includegraphics{cellsharing1}
+\includegraphics{cellsharing2}
+
+About thousand user share one borg cell. As you see the second graph you can see there are more machines require if users larger than the threshold.
+Google also ran CPI (cycle per instruction) test to see if CPU interference is occurring when multiple jobs with different characteristics are running on one machine.
+The result is that segregation CPU performance was 3% better and 1.19 times faster however it is not much significant.
 
 \subsection{Large Cells}
 
+\includegraphics{LargeCell1}
+\includegraphics{LargeCell2}
+
+
+Google builds large cell to reduce number of cells. As result from the graph, it requires more machine if it decides to use smaller cells. 
+
+
 \subsection{Resource requests and Reclamation}
+
+\includegraphics{resourceRequest1}
+\includegraphics{resourceRequest2}
+
+Borg user can request cpu with mili core, memory and disc with byte unit. If you see the first graph, you can tell user use different size of requirment for cpu and memories.
+If borg provide fixed size of container or Virtual Machine, it would require 30~50% more machines because of overhead.
+
+\includegraphics{reclamation1}
+
+ Sometimes user use less than what they requested or use more than what they requested.
+Borg use Resource reclamation process to predict how much resource is required for the task and reserve enough space
+First reservation is calculated as same requested. Around 300 seconds later it either reduced or expand the size as actual resource is required.
+
+As you see the graph, it require more machine if resource reclamation is not used.
+
+\includegraphics{reclamation2}
+
+Google also test with different reservation algorithm for four weeks to find out what kind estimation would fit the best.
+Run baseline for first week, aggressive algorithm for second week, medium algorithm that is between baseline and aggresive and back to baseline.
+The result from the graph, second and third week has more OOM(out-of-memory) than baseline.
+At the same time, they have more capacity to hold more tasks.
+Base on the result, Google choose medium algorithm for resource reclaimation.
 
 \section{Related Work}
 While there are numerous contributions of this paper, including the algothrims and systems by which they evaluated the experimental results, our review focused on the other similar cluster management solutions that are comparable to 'Borg'.
