@@ -90,9 +90,9 @@ Cell compaction is the metric by which all of the policies of borg, explained la
 \subsection{Cell Sharing}
 
 Borg manages about 83\% of entire set of machines that runs prod, non-prod task at the same time. prod is long running service that should never die such as Google search, gmail, google doc.
-Non-prod is service that takes couple seconds to several day to complete. Other companies usually use prod(user services) and non-prod(batch jobs) in seperate clusters. 
+Non-prod is service that takes couple seconds to several day to complete. Other companies usually use prod(user services) and non-prod(batch jobs) in separate clusters. 
 It requires 20~30\% more machines to run separate cluster.
-Borg can reduce the number of machines used becaues it handles most non-prod jobs using unused resources.
+Borg can reduce the number of machines used because it handles most non-prod jobs using unused resources.
 
 
 \includegraphics[scale=0.8]{segregation}
